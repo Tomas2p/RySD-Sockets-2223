@@ -308,14 +308,7 @@ void ClientConnection::WaitForRequests() {
 
     // Comando RETR (get)
     else if (COMMAND("RETR")) {
-      fscanf(fd, "%s", arg);
-
-      char path[MAX_BUFF];
-      if (getcwd(path, sizeof(path)) != NULL) {
-        strcat(path, "/"), strcat(path, arg);
-      }
-
-      printf("(RETR): %s\n(path): %s", arg, path);
+      fscanf(fd, "%s", arg), printf("(RETR):%s\n", arg);
 
       FILE *file = fopen(arg, "rb");
 

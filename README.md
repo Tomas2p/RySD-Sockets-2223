@@ -1,10 +1,11 @@
-# FTP - Servidor en el puerto 2121
 
-## Implementación del Protocolo de Transferencia de Archivos (FTP) en C++
+# FTP - Server on port 2121
 
-Práctica de Programación de Sockets. Redes y Sistemas Distribuidos - ULL
+## Implementation of File Transfer Protocol (FTP) in C++
 
-## Integrantes
+Socket Programming Practice. Computer Networks and Distributed Systems - ULL
+
+## Members
 
     @Tomás Pino Pérez (alu0101474311)
 
@@ -12,7 +13,7 @@ Práctica de Programación de Sockets. Redes y Sistemas Distribuidos - ULL
 
     @Jorge Saiz de León (alu0101483078)
 
-## Ejemplo de ejecucuión
+## Example of Execution
 
     ftp> put tests/b.txt
     local: tests/b.txt remote: tests/b.txt
@@ -42,21 +43,21 @@ Práctica de Programación de Sockets. Redes y Sistemas Distribuidos - ULL
     rm -f ftp_server
     g++ -std=c++17 -lpthread -Wall -o  ftp_server src/*.cpp
 
-## Uso
+## Usage
 
-En una terminal, inicia el servidor FTP:
+In a terminal, start the FTP server:
 
     $ ./ftp_server
     Server Running, waiting for connection to port 2121
 
-En una segunda terminal, inicia el comando FTP:
-  
+In a second terminal, start the FTP command:
+
     $ ftp
     ftp> open localhost 2121
 
-Se recomienda ir a la carpeta llamada "tests" y ejecutar todos los comandos allí, por razones de seguridad.
+It is recommended to navigate to the "tests" folder and execute all commands there for security reasons.
 
-## Implementaciones
+## Implementations
 
 - Login/logout
 - Upload files
@@ -69,12 +70,12 @@ Se recomienda ir a la carpeta llamada "tests" y ejecutar todos los comandos all�
 - Create/delete directories
 - List files in directory
 
-## Comandos
+## Commands
 
 | On ftp client | Name  |        Action        |
 | :-----------: | :---: | :------------------: |
 |       -       | USER  |   Client username    |
-|       -       | PASS  |   Cliente password   |
+|       -       | PASS  |   Client password    |
 |       -       | SYST  |  System information  |
 |      pwd      |  PWD  |  Directory location  |
 |      cd       |  CWD  |   Change directory   |
